@@ -1,0 +1,129 @@
+// // Variables
+// $surface: #f9f9fb;
+// $surface-container-low: #f2f4f6;
+// $surface-container-lowest: #ffffff;
+// $primary-fixed: #c6d7fe;
+// $secondary-fixed: #ebdcff;
+// $on-surface: #2e3336;
+// $noto-serif: 'Noto Serif', serif;
+// $manrope: 'Manrope', sans-serif;
+
+// // Mixins
+// @mixin aura-gradient {
+//   background: linear-gradient(135deg, $primary-fixed 0%, $secondary-fixed 100%);
+// }
+
+// @mixin soft-shadow {
+//   box-shadow: 0 20px 40px -10px rgba(78, 95, 128, 0.06);
+// }
+
+// .dashboard-container {
+//   background-color: $surface;
+//   color: $on-surface;
+//   font-family: $manrope;
+//   min-height: 100vh;
+// //   padding: 3rem;
+
+//   .nav-bar {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 64px;
+//     background: rgba(white, 0.8);
+//     backdrop-filter: blur(12px);
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 0 3rem;
+//     z-index: 100;
+    
+//     h2 { font-family: $noto-serif; font-style: italic; font-size: 1.25rem; }
+//   }
+
+//   .main-content {
+//     padding-top: 10px;;
+//     // margin-top: 4rem;
+//     max-width: 1200px;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+
+//   .hero-section {
+//     padding: 4rem 0;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: flex-end;
+
+//     .title-group {
+//       h1 {
+//         font-family: $noto-serif;
+//         font-size: 3.5rem;
+//         margin: 0;
+//         span { font-style: italic; font-weight: 400; }
+//       }
+//       p { opacity: 0.6; margin-top: 1rem; max-width: 400px; }
+//     }
+
+//     .metric-card {
+//       background: $surface-container-lowest;
+//       padding: 2rem;
+//       border-radius: 12px;
+//       @include soft-shadow;
+//       text-align: right;
+      
+//       label { text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; opacity: 0.5; }
+//       h2 { 
+//         font-family: $noto-serif; 
+//         font-size: 4.5rem; 
+//         margin: 0; 
+//         color: #4e5f80;
+//         span { font-size: 1.5rem; }
+//       }
+//     }
+//   }
+
+//   .grid-layout {
+//     display: grid;
+//     grid-template-columns: 2fr 1fr;
+//     gap: 2rem;
+
+//     .report-list {
+//       h3 { font-family: $noto-serif; margin-bottom: 2rem; font-size: 1.5rem; }
+      
+//       .report-item {
+//         background: $surface-container-lowest;
+//         padding: 1.5rem;
+//         border-radius: 12px;
+//         margin-bottom: 1.5rem;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         transition: background 0.3s ease;
+
+//         &:hover {
+//           background: $surface-container-low;
+//           .action-btn { opacity: 1; }
+//         }
+
+//         .info {
+//           span { font-size: 0.75rem; opacity: 0.5; }
+//           h4 { font-family: $noto-serif; font-size: 1.25rem; margin: 0.25rem 0 0; }
+//         }
+
+//         .score-box {
+//           text-align: right;
+//           .score { font-family: $noto-serif; font-size: 1.5rem; }
+//           .progress-bg {
+//             width: 100px;
+//             height: 4px;
+//             background: $surface-container-low;
+//             border-radius: 2px;
+//             margin-top: 0.5rem;
+//             .progress-fill { height: 100%; @include aura-gradient; border-radius: 2px; }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

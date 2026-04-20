@@ -1,0 +1,468 @@
+// @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Serif:wght@400;700&display=swap");
+
+// // Design System Tokens
+// $surface: #f8f9fc;
+// $surface-container: #ffffff;
+// $surface-container-low: #f1f3f9;
+// $surface-container-lowest: #eef1f8;
+// $primary: #4a5a94;
+// $on-primary: #ffffff;
+// $primary-container: #dbe1ff;
+// $on-primary-container: #001551;
+// $secondary: #585e71;
+// $on-secondary: #ffffff;
+// $outline: #74777f;
+// $outline-variant: #c4c6d0;
+// $on-surface: #1a1c1e;
+// $on-surface-variant: #44474f;
+// $success: #28a745;
+// $warning: #ffc107;
+// $error: #dc3545;
+
+// // General Setup
+// .insights-container {
+//   display: flex;
+//   background: $surface;
+//   min-height: 100vh;
+//   color: $on-surface;
+//   font-family: "Manrope", sans-serif;
+// }
+
+// // --- Left Navigation Sidebar ---
+// .nav-sidebar {
+//   width: 280px;
+//   background: $surface-container;
+//   padding: 30px 20px;
+//   display: flex;
+//   flex-direction: column;
+//   border-right: 1px solid $surface-container-low;
+//   position: sticky;
+//   top: 0;
+//   height: 100vh;
+
+//   .logo-header {
+//     font-family: "Noto Serif", serif;
+//     font-size: 1.5rem;
+//     font-weight: 700;
+//     padding: 10px 20px;
+//     margin-bottom: 20px;
+//   }
+
+//   .report-info {
+//     display: flex;
+//     align-items: center;
+//     gap: 15px;
+//     padding: 10px 20px;
+//     margin-bottom: 20px;
+//     .icon {
+//       font-size: 1.8rem;
+//       color: $primary;
+//     }
+//     h4 {
+//       margin: 0;
+//       font-weight: 600;
+//     }
+//     p {
+//       margin: 0;
+//       font-size: 0.85rem;
+//       color: $on-surface-variant;
+//     }
+//   }
+
+//   .menu {
+//     flex-grow: 1;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 8px;
+//     padding: 0 10px;
+//     a {
+//       display: flex;
+//       align-items: center;
+//       gap: 12px;
+//       padding: 12px 15px;
+//       text-decoration: none;
+//       color: $on-surface-variant;
+//       font-size: 0.9rem;
+//       font-weight: 500;
+//       border-radius: 8px;
+//       transition: all 0.2s ease;
+//       &.active,
+//       &:hover {
+//         background: $primary-container;
+//         color: $primary;
+//         font-weight: 600;
+//       }
+//     }
+//   }
+
+//   .actions {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+//     padding: 0 10px;
+//     button {
+//       display: flex;
+//       align-items: center;
+//       gap: 10px;
+//       background: none;
+//       border: none;
+//       padding: 12px 15px;
+//       text-align: left;
+//       font-size: 0.9rem;
+//       color: $on-surface-variant;
+//       cursor: pointer;
+//       border-radius: 8px;
+//       &:hover {
+//         background: $surface-container-low;
+//       }
+//     }
+//   }
+// }
+
+// // --- Main Content Area ---
+// .content-main {
+//   flex: 1;
+//   display: flex;
+//   flex-direction: column;
+//   padding: 50px 70px;
+//   max-width: 950px;
+
+//   .content-header {
+//     margin-bottom: 50px;
+//     .badge {
+//       color: $primary;
+//       font-weight: 700;
+//       font-size: 0.7rem;
+//       text-transform: uppercase;
+//       letter-spacing: 0.5px;
+//     }
+//     h1 {
+//       font-family: "Noto Serif", serif;
+//       font-size: 2.8rem;
+//       margin: 10px 0;
+//       letter-spacing: -1px;
+//     }
+//     p {
+//       font-size: 1.1rem;
+//       color: $on-surface-variant;
+//       max-width: 600px;
+//     }
+//   }
+
+//   .section {
+//     margin-bottom: 60px;
+//     h2 {
+//       font-family: "Noto Serif", serif;
+//       font-size: 1.8rem;
+//       margin-bottom: 30px;
+//       padding-bottom: 15px;
+//       border-bottom: 1px solid $surface-container-low;
+//     }
+//   }
+
+//   .qa-card {
+//     display: flex;
+//     gap: 25px;
+//     margin-bottom: 30px;
+//     background: $surface-container;
+//     padding: 30px;
+//     border-radius: 20px;
+//     border: 1px solid $surface-container-low;
+//     .number {
+//       font-size: 1.5rem;
+//       font-weight: 400;
+//       color: $outline-variant;
+//       font-family: "Noto Serif", serif;
+//     }
+//     .qa-body {
+//       flex: 1;
+//       h3 {
+//         margin-top: 0;
+//         margin-bottom: 20px;
+//         font-size: 1.1rem;
+//         font-weight: 600;
+//       }
+//       .info-boxes {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr;
+//         gap: 20px;
+//         .box {
+//           background: $surface-container-low;
+//           padding: 15px;
+//           border-radius: 12px;
+//           label {
+//             font-weight: 700;
+//             font-size: 0.65rem;
+//             text-transform: uppercase;
+//             color: $primary;
+//             display: block;
+//             margin-bottom: 8px;
+//           }
+//           p {
+//             margin: 0;
+//             font-size: 0.85rem;
+//             line-height: 1.5;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .behavioral-card {
+//     background: $surface-container;
+//     padding: 30px;
+//     border-radius: 20px;
+//     border: 1px solid $surface-container-low;
+//     margin-bottom: 30px;
+//     h3 {
+//       margin-top: 0;
+//       font-size: 1.1rem;
+//       font-weight: 600;
+//     }
+//     .guidance {
+//       margin-top: 20px;
+//       border-left: 3px solid $primary-container;
+//       padding-left: 20px;
+//       label {
+//         font-weight: 700;
+//         font-size: 0.65rem;
+//         text-transform: uppercase;
+//         color: $primary;
+//         display: block;
+//         margin-bottom: 8px;
+//       }
+//       p {
+//         margin: 0;
+//         font-size: 0.9rem;
+//         line-height: 1.6;
+//         strong {
+//           color: $primary;
+//         }
+//       }
+//     }
+//   }
+
+//   .prep-section .timeline {
+//     position: relative;
+//     padding-left: 40px;
+//     .time-node {
+//       position: relative;
+//       margin-bottom: 25px;
+//       &:before {
+//         content: "";
+//         position: absolute;
+//         left: -28px;
+//         top: 5px;
+//         width: 14px;
+//         height: 14px;
+//         background: $surface-container;
+//         border: 3px solid $primary-container;
+//         border-radius: 50%;
+//         z-index: 1;
+//       }
+//       &:not(:last-child):after {
+//         content: "";
+//         position: absolute;
+//         left: -22px;
+//         top: 20px;
+//         bottom: -20px;
+//         width: 2px;
+//         background: $primary-container;
+//       }
+//       .day {
+//         position: absolute;
+//         left: -60px;
+//         top: 0;
+//         font-family: "Noto Serif", serif;
+//         font-size: 1.5rem;
+//         color: $outline-variant;
+//       }
+//       .plan-card {
+//         background: $surface-container;
+//         padding: 25px;
+//         border-radius: 16px;
+//         border: 1px solid $surface-container-low;
+//         h3 {
+//           margin: 0 0 15px 0;
+//           font-size: 1.1rem;
+//         }
+//         ul {
+//           list-style: none;
+//           padding: 0;
+//           margin: 0;
+//           display: flex;
+//           flex-direction: column;
+//           gap: 30px;
+//           li {
+//             display: flex;
+//             align-items: center;
+//             gap: 8px;
+//             font-size: 0.9rem;
+//             svg {
+//               color: $primary;
+//             }
+//           }
+//         }
+//       }
+//     }
+//     .final-review {
+//       background: $primary-container;
+//       padding: 25px;
+//       border-radius: 16px;
+//       display: flex;
+//       align-items: center;
+//       gap: 20px;
+//       .icon-wrapper {
+//         background: $primary;
+//         color: $on-primary;
+//         width: 40px;
+//         height: 40px;
+//         border-radius: 50%;
+//         display: grid;
+//         place-items: center;
+//         font-size: 1.2rem;
+//       }
+//       p {
+//         margin: 0;
+//         flex: 1;
+//         font-size: 0.9rem;
+//         line-height: 1.5;
+//       }
+//     }
+//   }
+// }
+
+// // --- Right Metrics Sidebar ---
+// .metrics-sidebar {
+//   width: 340px;
+//   padding: 50px 30px;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 30px;
+//   position: sticky;
+//   top: 0;
+//   height: 100vh;
+
+//   .metric-card {
+//     background: $surface-container;
+//     padding: 25px;
+//     border-radius: 20px;
+//     border: 1px solid $surface-container-low;
+//     .header {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       margin-bottom: 20px;
+//       h3 {
+//         margin: 0;
+//         font-size: 0.8rem;
+//         font-weight: 700;
+//         text-transform: uppercase;
+//         letter-spacing: 0.5px;
+//         color: $on-surface-variant;
+//       }
+//       svg {
+//         color: $outline;
+//       }
+//     }
+//   }
+
+//   .precision-card {
+//     text-align: center;
+//     .radial-progress {
+//       position: relative;
+//       width: 140px;
+//       height: 140px;
+//       margin: 10px auto;
+//       display: grid;
+//       place-items: center;
+//       .progress-circle {
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         transform: rotate(-90deg);
+//       }
+//       .progress-bg,
+//       .progress-fill {
+//         fill: none;
+//         stroke-width: 10;
+//       }
+//       .progress-bg {
+//         stroke: $surface-container-low;
+//       }
+//       .progress-fill {
+//         stroke: $primary;
+//         stroke-linecap: round;
+//         stroke-dasharray: 377; // 2 * PI * 60
+//         stroke-dashoffset: 94; // 377 * (1 - 0.75)
+//         transition: stroke-dashoffset 0.5s ease;
+//       }
+//       .percent-text {
+//         .percent {
+//           font-size: 2.2rem;
+//           font-weight: 700;
+//         }
+//         .strength {
+//           font-size: 0.7rem;
+//           text-transform: uppercase;
+//           font-weight: 700;
+//           color: $primary;
+//           display: block;
+//         }
+//       }
+//     }
+//   }
+
+//   .skill-gap-card {
+//     .gap-item {
+//       margin-bottom: 15px;
+//       .label-row {
+//         display: flex;
+//         justify-content: space-between;
+//         font-size: 0.85rem;
+//         margin-bottom: 8px;
+//         .level {
+//           font-size: 0.75rem;
+//           font-weight: 600;
+//           padding: 2px 8px;
+//           border-radius: 6px;
+//           &.medium {
+//             background: #fffbe6;
+//             color: #f59e0b;
+//           }
+//           &.low {
+//             background: #eff6ff;
+//             color: #60a5fa;
+//           }
+//         }
+//       }
+//       .progress-bar {
+//         height: 5px;
+//         background: $surface-container-low;
+//         border-radius: 2.5px;
+//         overflow: hidden;
+//         .fill {
+//           height: 100%;
+//           border-radius: 2.5px;
+//         }
+//       }
+//     }
+//   }
+
+//   .editorial-advice {
+//     background: $primary-container;
+//     padding: 20px;
+//     border-radius: 16px;
+//     h3 {
+//       margin: 0 0 10px 0;
+//       font-size: 1rem;
+//       color: $on-primary-container;
+//     }
+//     p {
+//       margin: 0;
+//       font-size: 0.9rem;
+//       line-height: 1.6;
+//       color: darken($on-primary-container, 10%);
+//     }
+//   }
+// }
