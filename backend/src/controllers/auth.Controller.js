@@ -139,7 +139,7 @@ const loginUser = [
       res.cookie("token", token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        sameSite: process.env.NODE_ENV === "production" ? "strict" : "lax",
+        sameSite: "none",
       });
       res.status(200).json({
         message: "User Loggedin sucessfully",
