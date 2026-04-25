@@ -3,6 +3,31 @@ const ai = new GoogleGenAI({
   apiKey: process.env.GOOGLE_GENAI_API_KEY,
 });
 const puppeteer = require("puppeteer");
+const path = require('path');
+const fs = require('fs');
+
+async function getExecutablePath() {
+    // 1. Prioritize an explicit ENV variable if it exists
+    if (process.env.PUPPETEER_EXECUTABLE_PATH) return process.env.PUPPETEER_EXECUTABLE_PATH;
+
+    // 2. Locate the .cache folder inside the backend directory
+    // On Render, process.cwd() is /opt/render/project/src/backend
+    const cachePath = path.join(process.cwd(), '.cache', 'puppeteer', 'chrome');
+    
+    if (!fs.existsSync(cachePath)) {
+        console.error("Puppeteer cache not found at:", cachePath);
+        return null;
+    }
+
+    // 3. Automatically find the chrome binary inside the versioned folders
+    const versions = fs.readdirSync(cachePath);
+    if (versions.length > 0) {
+        // Path: .cache/puppeteer/chrome/linux-<version>/chrome-linux64/chrome
+        return path.join(cachePath, versions[0], 'chrome-linux64', 'chrome');
+    }
+
+    return null;
+}
 
 async function generatePdfFromHtml(htmlContent) {
   let browser;
