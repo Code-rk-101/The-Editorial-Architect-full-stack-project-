@@ -110,7 +110,6 @@ async function generateInterviewReport({
       responseMimeType: "application/json",
     },
   });
-  console.log(response.text);
   return normalizeInterviewReportPayload(parseModelJsonResponse(response.text));
 }
 

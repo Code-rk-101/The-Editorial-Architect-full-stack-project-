@@ -62,7 +62,6 @@ const generateInterviewReportController = [
         ...interviewReportByAi,
       });
 
-      // console.log(interviewReport);
       res.status(201).json({
         message: "Interview report ",
         interviewReport,

@@ -15,6 +15,7 @@ async function generatePdfFromHtml(htmlContent) {
         "--disable-setuid-sandbox",
         "--disable-dev-shm-usage",
         "--disable-gpu",
+        "--disable-extensions", // Extra stability
       ],
     };
 
@@ -73,7 +74,6 @@ async function generateResumePdf({ resume, selfDescription, jobDescription }) {
   });
 
   const jsonContent = JSON.parse(response.text);
-  console.log(jsonContent);
 
   const pdfBuffer = await generatePdfFromHtml(jsonContent.html);
   return pdfBuffer;
