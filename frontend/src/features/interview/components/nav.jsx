@@ -101,9 +101,9 @@ export default function NavBar() {
       <header className="sticky top-0 z-50 w-full">
         <div className="absolute inset-0 bg-[#F8F9FB]/90 backdrop-blur-md border-b border-slate-100 z-20"></div>
         
-        <nav className="relative flex items-center justify-between px-6 py-4 md:px-12 w-full mx-auto z-30">
+        <nav className="relative flex items-center justify-between px-3 py-4 md:px-12 w-full mx-auto z-30">
           {/* 1. Left Section: Brand & Mobile Toggle */}
-          <div className="flex items-center gap-4 flex-1">
+          <div className="flex items-center gap-2 flex-1">
             <button
               className="md:hidden text-[#1A1A2E] hover:text-slate-500 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -136,7 +136,7 @@ export default function NavBar() {
               <Motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-[#DCE4FF] text-[#1A1A2E] px-6 py-2 rounded-xl text-sm font-semibold transition-colors hover:bg-[#c8d4ff]"
+                className="bg-[#DCE4FF] text-[#1A1A2E] px-4 py-2 rounded-xl text-sm font-semibold transition-colors hover:bg-[#c8d4ff]"
                 onClick={() => navigate("/auth")}
               >
                 LOGIN
